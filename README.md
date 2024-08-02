@@ -1,27 +1,45 @@
 # LibraryAngular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.2.
+[Link to the Github repository](https://github.com/SullyvanBoulanger/library-angular)
 
-## Development server
+Made by Bounaceur Mohamed and Boulanger Sullyvan
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Table of contents
 
-## Code scaffolding
+- [LibraryAngular](#libraryangular)
+  - [Table of contents](#table-of-contents)
+  - [Installation](#installation)
+  - [Launch](#launch)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Installation
 
-## Build
+1. Clone this project
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```sh
+git clone git@github.com:SullyvanBoulanger/library-angular.git
+```
 
-## Running unit tests
+2. Install dependencies
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```sh
+# npm
+npm i
+# yarn
+yarn i
+# pnpm
+pnpm i
+```
 
-## Running end-to-end tests
+## Launch
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. Run json-server in a terminal
 
-## Further help
+```sh
+npm run json-server
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+2. Run angular app in another terminal
+
+```sh
+ng serve -o
+```

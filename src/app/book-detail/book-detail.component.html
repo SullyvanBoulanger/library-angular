@@ -1,6 +1,8 @@
 @if(book$|async; as book){
 <div class="flex flex-col justify-center items-center gap-4">
-  <section class="w-1/2 flex flex-col bg-gray-300  items-center gap-4 p-10 rounded-full">
+  <section
+    class="w-1/2 flex flex-col bg-gray-300 items-center gap-4 p-10 rounded-full"
+  >
     <h2 class="font-bold underline">{{ book.title }}</h2>
     <p class="italic underline">by {{ book.author }}</p>
     <p class="">{{ book.description }}</p>
@@ -10,15 +12,23 @@
     >
       {{ book.status }}
     </p>
-    
   </section>
   <div class="flex justify-end gap-4">
-    <button [routerLink]="['/edit-book', book.id]" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Edit</button>
-    
-    <button (click)="removeBook(book.id)" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" >Remove</button>
+    <button
+      [routerLink]="['/edit-book', book.id]"
+      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+    >
+      Edit
+    </button>
+
+    <button
+      (click)="removeBook(book.id)"
+      class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+    >
+      Remove
+    </button>
   </div>
 </div>
 }@else {
 <div class="flex justify-center items-center text-xl">No book found</div>
 }
-

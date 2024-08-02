@@ -14,18 +14,15 @@ import { BookService } from '../book.service';
   styleUrl: './book-add.component.css',
 })
 export class BookAddComponent {
-  subscriptions: Subscription[] = [];
+  private subscriptions: Subscription[] = [];
   constructor(private bookService: BookService, private router: Router) {}
 
   ngOnDestroy() {
-    console.log('Je me détruis');
     this.subscriptions.forEach((subscription) => subscription.unsubscribe());
   }
 
   addBook(newBook: Book) {
     if (newBook) {
-      console.log(newBook);
-
       this.subscriptions.push(
         this.bookService
           .addBook(newBook)

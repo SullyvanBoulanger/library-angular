@@ -30,11 +30,8 @@ export class BookFormComponent {
   constructor(private formBuilder: NonNullableFormBuilder) {}
 
   ngOnInit() {
-    console.log(this.defaultBook);
     if (this.defaultBook) {
-      console.log('defaultBook');
-
-      const {id, ...book} = this.defaultBook;
+      const { id, ...book } = this.defaultBook;
       this.bookForm.setValue(book);
     }
   }

@@ -9,14 +9,14 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-book-list',
   standalone: true,
-  imports: [AsyncPipe,BookItemComponent, RouterLink],
+  imports: [AsyncPipe, BookItemComponent, RouterLink],
   templateUrl: './book-list.component.html',
-  styleUrl: './book-list.component.css'
+  styleUrl: './book-list.component.css',
 })
 export class BookListComponent {
   books$: Observable<Book[]>;
 
-  constructor(private bookService:BookService){
+  constructor(private bookService: BookService) {
     this.books$ = this.bookService.getBooks();
   }
 }

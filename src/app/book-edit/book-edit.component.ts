@@ -16,12 +16,13 @@ import { AsyncPipe } from '@angular/common';
 export class BookEditComponent {
   subscriptions: Subscription[] = [];
   book$: Observable<Book> = new Observable();
+
   constructor(private bookService: BookService, private router: Router) {}
 
   ngOnDestroy() {
-    console.log('Je me détruis');
     this.subscriptions.forEach((subscription) => subscription.unsubscribe());
   }
+
   @Input()
   set id(id: string) {
     this.book$ = this.bookService.getBook(id);
@@ -29,7 +30,6 @@ export class BookEditComponent {
 
   editBook(updatedBook: Book) {
     if (updatedBook) {
-      console.log(updatedBook);
 
       this.subscriptions.push(
         this.bookService

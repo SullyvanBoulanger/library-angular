@@ -64,11 +64,18 @@
       "status": "borrowed"
     },
     {
-      "id": "qmG0iun",
-      "title": "qwe222",
-      "author": "qwe222",
-      "description": "qwe222",
-      "status": "borrowed"
+      "id": "10",
+      "title": "Les Âmes croisées",
+      "author": "Pierre Bottero",
+      "description": "Nawel est une jeune Perle prétentieuse et exigeante. Un jour, en se baladant dans la ville Cendre, elle bouscule une jeune Cendre nommée Sylia qui, sous le coup de la colère, lui lâche qu'elle n'est qu'une maladroite. Nawel, piquée au vif, ordonne aux soldats présents de la faire fouetter en même temps que son mari osant avoir supplié Nawel d'épargner Sylia. Les gardes, connaissant le statut que confère à Nawel son nom de famille, ne peuvent que s’exécuter.",
+      "status": "available"
+    },
+    {
+      "id": "11",
+      "title": "Eragon",
+      "author": "Christopher Paolini",
+      "description": "Eragon takes place in a land called Alagaësia, over which rules the evil, twisted king, Galbatorix. Galbatorix was once one of the legendary Dragon Riders - the long-gone peacekeepers of Alagaësia. After his first dragon was killed by Urgals, Galbatorix fell into madness, stole a new dragon, Shruikan, twisting the dragon's mind with dark magic, and betrayed and destroyed the Riders and their dragons with the help of thirteen other Riders called the Forsworn.",
+      "status": "available"
     }
   ]
 }
