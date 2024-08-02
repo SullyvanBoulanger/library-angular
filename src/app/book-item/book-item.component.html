@@ -2,7 +2,7 @@
   <h2 class="font-bold underline">
     {{ book.title }}
   </h2>
-  <p class="font-italic underline">by {{ book.author }}</p>
+  <p class="italic underline">by {{ book.author }}</p>
   <p class="text-green-700" [class.text-red-700] = 'book.status === BS.BORROWED'>{{ book.status }}</p>
 </section>
 
