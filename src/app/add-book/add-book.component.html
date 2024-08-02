@@ -1,0 +1,18 @@
+<form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+  <label for="title">Title : </label>
+  <input id="title" type="text" formControlName="title" />
+
+  <label for="author">Author : </label>
+  <input id="author" type="text" formControlName="author" />
+
+  <label for="description">Description : </label>
+  <input id="description" type="text" formControlName="description" />
+
+  <label for="status">Status : </label>
+  <select name="status" id="status" formControlName="status">
+    @for(status of BS;track $index){
+    <option [value]="status">{{ bsLabels[status] }}</option>
+    }
+  </select>
+  <button type="submit" [disabled]="!bookForm.valid">Submit</button>
+</form>

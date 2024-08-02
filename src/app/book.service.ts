@@ -1,7 +1,8 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { catchError, Observable, throwError } from 'rxjs';
 import { Book } from './book.model';
-import { Observable } from 'rxjs';
+
 @Injectable({
   providedIn: 'root',
 })
@@ -11,5 +12,14 @@ export class BookService {
 
   getBooks(): Observable<Book[]> {
     return this.http.get<Book[]>(this.apiUrl);
+  }
+
+  addBook({ id, ...book }: Book): Observable<void> {
+    const newBook = {
+      ...book,
+      status: `${book.status}`,
+    };
+
+    return this.http.post<void>(this.apiUrl, newBook);
   }
 }
