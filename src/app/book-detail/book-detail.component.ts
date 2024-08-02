@@ -2,14 +2,14 @@ import { Component, Input } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Book } from '../book.model';
 import { BookService } from '../book.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { AsyncPipe } from '@angular/common';
 import { BookStatus } from '../book-status';
 
 @Component({
   selector: 'app-book-detail',
   standalone: true,
-  imports: [AsyncPipe],
+  imports: [AsyncPipe, RouterLink],
   templateUrl: './book-detail.component.html',
   styleUrl: './book-detail.component.css',
 })

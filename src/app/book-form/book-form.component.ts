@@ -18,7 +18,7 @@ export class BookFormComponent {
   public BS = Object.values(BookStatus);
   public bsLabels = BookStatusLabelMapping;
 
-  @Input() defaultBook?: Book;
+  @Input() defaultBook?: Book|null;
   @Output() onSubmit = new EventEmitter<Book>();
   bookForm = this.formBuilder.group({
     title: ['', Validators.required],
