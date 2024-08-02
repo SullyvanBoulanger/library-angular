@@ -15,10 +15,7 @@ import { BookService } from '../book.service';
 })
 export class BookAddComponent {
   subscriptions: Subscription[] = [];
-  constructor(
-    private bookService: BookService,
-    private router: Router
-  ) {}
+  constructor(private bookService: BookService, private router: Router) {}
 
   ngOnDestroy() {
     console.log('Je me détruis');

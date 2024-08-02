@@ -1,0 +1,17 @@
+@if(book$|async; as book){
+<div class="flex justify-center">
+  <section class="flex flex-col bg-gray-300  items-center gap-4 p-10 rounded-full">
+    <h2 class="font-bold underline">{{ book.title }}</h2>
+    <p class="italic underline">by {{ book.author }}</p>
+    <p class="">{{ book.description }}</p>
+    <p
+      class="text-green-700"
+      [class.text-red-700]="book.status === BS.BORROWED"
+    >
+      {{ book.status }}
+    </p>
+  </section>
+</div>
+}@else {
+<div class="flex justify-center items-center text-xl">No book found</div>
+}

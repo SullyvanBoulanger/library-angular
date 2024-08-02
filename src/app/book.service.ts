@@ -13,7 +13,9 @@ export class BookService {
   getBooks(): Observable<Book[]> {
     return this.http.get<Book[]>(this.apiUrl);
   }
-
+  getBook(id:string):Observable<Book>{
+    return this.http.get<Book>(`${this.apiUrl}/${id}`)
+  }
   addBook({ id, ...book }: Book): Observable<void> {
     const newBook = {
       ...book,
@@ -22,4 +24,8 @@ export class BookService {
 
     return this.http.post<void>(this.apiUrl, newBook);
   }
+  editBook(book: Book){
+    return this.http.put<void>(this.apiUrl, book);
+  }
+
 }
