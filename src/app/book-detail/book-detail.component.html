@@ -13,9 +13,9 @@
     
   </section>
   <div class="flex justify-end gap-4">
-    <a [routerLink]="['/edit-book', book.id]"><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Edit</button></a>
+    <button [routerLink]="['/edit-book', book.id]" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Edit</button>
     
-    <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Remove</button>
+    <button (click)="removeBook(book.id)" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" >Remove</button>
   </div>
 </div>
 }@else {

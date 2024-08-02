@@ -30,4 +30,7 @@ export class BookService {
   editBook(book: Book) {
     return this.http.put<void>(`${this.apiUrl}/${book.id}`, book);
   }
+  removeBook(id:string){
+    return this.http.delete<void>(`${this.apiUrl}/${id}`);
+  }
 }

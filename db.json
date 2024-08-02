@@ -12,7 +12,7 @@
       "title": "1984",
       "author": "George Orwell",
       "description": "A dystopian novel set in a totalitarian society ruled by Big Brother.",
-      "status": "borrowed"
+      "status": "available"
     },
     {
       "id": "3",
@@ -64,11 +64,11 @@
       "status": "borrowed"
     },
     {
-      "id": "ZRRrpjp",
-      "title": "Test222",
-      "author": "Test",
-      "description": "Test",
-      "status": "available"
+      "id": "qmG0iun",
+      "title": "qwe222",
+      "author": "qwe222",
+      "description": "qwe222",
+      "status": "borrowed"
     }
   ]
 }

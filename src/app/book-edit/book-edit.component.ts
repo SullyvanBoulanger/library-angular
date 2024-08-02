@@ -34,7 +34,7 @@ export class BookEditComponent {
       this.subscriptions.push(
         this.bookService
           .editBook(updatedBook)
-          .subscribe(() => this.router.navigate(['books']))
+          .subscribe(() => this.router.navigate(['book', updatedBook.id]))
       );
     }
   }

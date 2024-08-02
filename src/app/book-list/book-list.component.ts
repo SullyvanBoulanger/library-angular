@@ -4,11 +4,12 @@ import { Book } from '../book.model';
 import { BookService } from '../book.service';
 import { AsyncPipe } from '@angular/common';
 import { BookItemComponent } from '../book-item/book-item.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-book-list',
   standalone: true,
-  imports: [AsyncPipe,BookItemComponent],
+  imports: [AsyncPipe,BookItemComponent, RouterLink],
   templateUrl: './book-list.component.html',
   styleUrl: './book-list.component.css'
 })
