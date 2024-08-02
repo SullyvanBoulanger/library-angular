@@ -15,7 +15,7 @@ import { AsyncPipe } from '@angular/common';
 })
 export class BookEditComponent {
   subscriptions: Subscription[] = [];
-  book?: Book;
+  book$: Observable<Book> = new Observable();
   constructor(private bookService: BookService, private router: Router) {}
 
   ngOnDestroy() {
@@ -24,10 +24,9 @@ export class BookEditComponent {
   }
   @Input()
   set id(id: string) {
-    this.subscriptions.push(
-      this.bookService.getBook(id).subscribe((book) => (this.book = book))
-    );
+    this.book$ = this.bookService.getBook(id);
   }
+
   editBook(updatedBook: Book) {
     if (updatedBook) {
       console.log(updatedBook);

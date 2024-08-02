@@ -1,4 +1,6 @@
+@if (book$ | async; as book) {
 <app-book-form
   [defaultBook]="book"
   (onSubmit)="editBook($event)"
 ></app-book-form>
+}

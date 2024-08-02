@@ -18,7 +18,7 @@ export class BookFormComponent {
   public BS = Object.values(BookStatus);
   public bsLabels = BookStatusLabelMapping;
 
-  @Input() defaultBook?: Book|null;
+  @Input() defaultBook?: Book;
   @Output() onSubmit = new EventEmitter<Book>();
   bookForm = this.formBuilder.group({
     title: ['', Validators.required],
@@ -30,16 +30,18 @@ export class BookFormComponent {
   constructor(private formBuilder: NonNullableFormBuilder) {}
 
   ngOnInit() {
+    console.log(this.defaultBook);
     if (this.defaultBook) {
-      console.log('defaultBOok');
+      console.log('defaultBook');
 
-      this.bookForm.setValue(this.defaultBook);
+      const {id, ...book} = this.defaultBook;
+      this.bookForm.setValue(book);
     }
   }
 
   submit() {
     const book: Book = {
-      id: '',
+      id: this.defaultBook?.id || '',
       title: this.bookForm.value.title || '',
       author: this.bookForm.value.author || '',
       description: this.bookForm.value.description || '',
